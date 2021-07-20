@@ -1,0 +1,9 @@
+<mat-selection-list #element [multiple]="false">
+  <mat-list-option *ngFor="let word of words" [value]="word.mean">
+    {{word.word}}
+  </mat-list-option>
+</mat-selection-list>
+
+<p>
+  Option selected: {{element.selectedOptions.selected[0]?.value}}
+</p>
